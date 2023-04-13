@@ -1,0 +1,5 @@
+#include <stdio.h> //include header file for input/output manipulation
+int main() { //Create //Create main() function
+  printf("Hello, Worldl!"); //Print the string "Hello, World!" in output
+  return 0; // Return 0 in case than main function ending with success
+}
