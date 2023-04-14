@@ -1,0 +1,4 @@
+#include <stdio.h> // Include header file for input/output manipulation
+int main() { // Create main() function
+printf("%d", EOF); // Print the EOF value
+}
