@@ -1,0 +1,6 @@
+#include <stdio.h> // Include header file for input/output manipulation
+int main() { // Create main() function
+int c; // Declare int variables
+c = (getchar() != EOF); // Define c variable with an expression 
+printf("%d", c); // Print the int variable
+}
