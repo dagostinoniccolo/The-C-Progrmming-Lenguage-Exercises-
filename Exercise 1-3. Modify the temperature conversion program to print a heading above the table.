@@ -1,0 +1,19 @@
+#include <stdio.h> // Include header file for input/output manipulation
+int main() { // Create main unction
+int min, max, step; // Declare the int's type variables
+float celsius; // Declare the float's type variable
+
+// Define all variables 
+min = 0; 
+max = 300;
+step = 20;
+celsius = 0;
+
+printf("°F\t\t°C"); // Print intestation of the 2 temperature's separed from 2 escape characters (\tabs)
+for ( min = 0; min <= max; min += step ) // Create a for loop that go from 0 to 300 and that growly 20  for each repetition (You can edit this values)
+{
+  celsius = (5.0/9.0) * (min-32.0); // Write expression to convert Fahrenheit at Celsius for all value of the for loop
+  printf("\n%d\t\t%f", min, celsius ); //Print all the normals values of for loop and all value resulted from expression (Celsius temperature) + 3 escape character (\newlines,\tabs,\tabs)
+}
+return 0; // Return 0 in case of execution code success
+}
