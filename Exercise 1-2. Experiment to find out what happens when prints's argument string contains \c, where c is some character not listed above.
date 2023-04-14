@@ -1,0 +1,5 @@
+#include <stdio.h> // Include header file for input/output manipulation
+int main() { // Create main function
+  printf("\c"); // Print a non valid escape character and see what happen
+  return 0; // Return 0 in case of success of main function execute
+}
