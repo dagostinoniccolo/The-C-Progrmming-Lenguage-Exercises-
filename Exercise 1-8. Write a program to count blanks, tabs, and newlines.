@@ -1,0 +1,31 @@
+#include <stdio.h> // Include header file for input/output manipulation
+int main() { // Create main() function
+int n, t, c, b; // Declare int vars
+
+// Define int var
+n = 0;
+t = 0;
+c = 0;
+b = 0;
+while ((c = getchar()) != EOF) // Looping getchar function until user don't press CTRL+D
+{
+putchar(c); // output user input
+if (c == ' ') // if user input is blankspace
+{
+  ++b; // increment of 1 b var
+  continue; // continue execution
+}
+else if (c == '\t') // else if inut is tabs
+{
+  ++t; // incremente of 1 t var
+  continue; // continue execution
+}
+else if (c == '\n') // else if input is newlines
+{
+  ++n; // increments of 1 n vars
+  continue; // continue execution
+}
+}
+printf("\nTabs:\t%d\nNewL:\t%d\nBlanks:\t%d\n", t,n,b); // print in terminal value of the var used for stored number of ripetition of \n,\t,' '
+return 0; // return 0 if no error code occurs during execution of the program
+}
