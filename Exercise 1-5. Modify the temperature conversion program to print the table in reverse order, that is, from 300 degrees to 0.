@@ -1,0 +1,18 @@
+#include <stdio.h> // Include header file for input/output manipulation
+int main() { // Create main() function
+int min, step; // Declare int variable's
+double fahr ,max; // Declare the  floating-point double variable's
+
+// Define the int variables
+min = 0;
+max = 300;
+step = 20;
+
+printf("°C\t\t°F"); // Print heading of temperature
+for ( max = 300; max >= min; max -= step ) //  Loop Fahrenheit temperature from 300 to 0 that decrement 20 for each ripetitions
+{
+  fahr =(max * 1.8) + 32; // Write expression for convertion ( Celsius to Fahr)
+  printf("\n%f\t\t%f\n", max, fahr ); // Print the variables that contain the two temperauture format
+}
+return 0; // Return 0 in case of execution code success
+}
