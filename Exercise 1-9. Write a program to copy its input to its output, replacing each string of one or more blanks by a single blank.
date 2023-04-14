@@ -1,16 +1,18 @@
-#include <stdio.h>
-int main() { 
-int c, pass;
+#include <stdio.h> // inlude header file for input/output manipulation
+int main() {  // create main() function
+int c, pass; // declare int variables
+
+// Define int variables
 c = 0;
 pass = 0;
-while ((c = getchar()) != EOF) {
-  if (c == ' ') {
-    while ((c = getchar()) == ' ') {
-         pass = 1;
+while ((c = getchar()) != EOF) { // Until user input is  ctrl+d the loop is executed (Now you have learned)
+  if (c == ' ') { // if input is blank space
+    while ((c = getchar()) == ' ') { //til input is a blank space (this allow us to manage more than one)
+         pass = 1; // controll variable become 1 
        }
-  if (pass = 1) {
-   putchar(' ');
+  if (pass = 1) { // if control variable is 1
+   putchar(' '); // we output only 1 blank space indipendentment if input have more than 1 blank space in sequence
     }  
-  } putchar(c);
- } return 0;
+  } putchar(c); // we output rest of input
+ } return 0; // return 0 if no error code occur during process
 }
