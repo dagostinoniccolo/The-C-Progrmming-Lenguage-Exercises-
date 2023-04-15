@@ -1,0 +1,23 @@
+#include <stdio.h> // Include header file for input/output manipulation
+int main() { // Create main() function
+  int c = 0; // Define int var
+  while ((c = getchar()) != EOF) // Until user input is ctrl+D
+  {
+    if (c == '\t') // if input is tabs
+    {
+      putchar('\\'); // Print '\'
+      putchar('t'); // Print 't'
+    }
+    else if (c == '\n') // if input is newline
+    {
+      putchar('\\'); // Print '\' 
+      putchar('n'); // Print 'n'
+    }
+    else if (c == ' ') // if input is  blank space
+    {
+      putchar('\\'); // Print '\'
+      putchar('\\'); // Print '\'
+    } 
+    putchar(c); // Print the rest of input 
+  }
+}  return 0; // Return 0 in case of no  error occurs during program execution
