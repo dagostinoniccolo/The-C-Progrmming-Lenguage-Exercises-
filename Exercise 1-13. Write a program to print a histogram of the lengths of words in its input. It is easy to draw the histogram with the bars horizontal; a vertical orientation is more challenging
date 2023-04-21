@@ -1,0 +1,47 @@
+#include <stdio.h> // include header file for input/output manipulation
+
+/*/ 
+define macro
+IN(a word)
+OUT(of a word)
+MAX(char countable)
+/*/
+#define IN 1
+#define OUT 0
+#define MAX 11
+
+int main() { // create main function
+int i; // declare index var
+int j; // declare index var
+int c; // declare input var
+int array[MAX]; // declare array for store n of iteration
+int state = IN; // define var state IN a word (by default)
+int nchar = 0; // define number of char to 0
+
+// initialize array 
+for (i = 0; i < MAX; i++) {
+   array[i] = 0;
+}
+while ((c = getchar()) != EOF) { // till input is a valid char
+ if (c == ' ' || c == '\n' || c == '\t') { // if input is a space
+  if (state == OUT) { // if state is out of a word
+   if (nchar < MAX) { // if number of char is in the possible range
+    ++array[nchar]; //  EXAMPLE: if nchar = 4, add 1 to 4th index of array
+   }
+  }
+   nchar = 0; // reset nchar number to 0
+   state = IN; // set state IN  a word
+ } else { // else if input is not a space
+    ++nchar; // increment nchar var of 1
+    state  = OUT; // set state OUT of word
+   }
+}
+for (i = 0; i < MAX; i++) { // for i to 0 from 11
+ printf("%2d|", i); // print 1 to 10
+  for ( j = 0; j < array[i]; j++) { // for j 0 to (actual) i
+   printf("*") // print the relative number of word 
+  }
+   printf("\n"); //print space
+}
+   return 0; // return 0 in case of no error occurs during program execution
+}
