@@ -37,17 +37,6 @@ while ((c = getchar()) != EOF) { // till input is a valid char
    state = IN; // set state IN  a word
  } else { // else if input is not a space
     ++nchar; // increment nchar var of 1
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     state  = OUT; // set state OUT of word
    }
 }
