@@ -1,3 +1,7 @@
+Vertical (easy) version;
+
+
+
 #include <stdio.h> // include header file for input/output manipulation
 
 /*/ 
@@ -33,6 +37,17 @@ while ((c = getchar()) != EOF) { // till input is a valid char
    state = IN; // set state IN  a word
  } else { // else if input is not a space
     ++nchar; // increment nchar var of 1
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     state  = OUT; // set state OUT of word
    }
 }
@@ -45,3 +60,86 @@ for (i = 0; i < MAX; i++) { // for i to 0 from 11
 }
    return 0; // return 0 in case of no error occurs during program execution
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Horizontal (intermed) version;
+
+
+#include <stdio.h>
+int main(){
+    int c, j = 0, i = 0;
+    int length = 0, height = 0;
+    int array[11];
+    for(i = 0; i < 11; ++i){
+        array[i] = 0;
+    }
+
+    while((c = getchar()) != EOF ){
+        if( c != ' ' && c != '\n' && c != '\t'){
+            ++length;
+        }
+        else if( length != 0){
+            if( length <= 10){
+                ++array[length -1];
+                    if(height < array[length -1]){
+                        height = array[length- 1];
+                    }
+                }
+                else{
+                ++array[10];
+                if(height < array[10]){
+                    height= array[10];
+                }
+                }
+                length = 0;
+            }
+        }
+        printf("\n");
+    for(i = height; i > 0; --i){
+        printf("%2d|", i);
+        for(j = 0; j <= 10; ++j){
+            if (array[j] >= i)
+             printf("*  ");
+             else 
+             printf("   ");
+             
+            }
+            printf("\n");
+          
+            }printf(" ");
+            for (i = 0; i <= 10; i++)
+            {
+            if (i < 10)
+                {
+                printf("%3d", i+1);
+                }              
+                else
+                printf(" +10");
+               
+                    
+            }
+         }
+
+
+  
+    
+
+
+
+
+
